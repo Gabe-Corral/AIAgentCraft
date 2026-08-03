@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+/game_server/*
+!/game_server/run_server.sh
+!/game_server/server.properties.example
