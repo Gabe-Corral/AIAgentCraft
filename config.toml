@@ -1,0 +1,6 @@
+[minecraft]
+host = "localhost"
+auth = "offline"
+port = 25565
+username = "Bot_1"
+version = "1.21.11"

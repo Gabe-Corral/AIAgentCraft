@@ -1,6 +1,12 @@
+import sys
 import time
+from pathlib import Path
 
-from main import Bot
+if __package__ in {None, ""}:
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from src.bot import Bot
+from src.config import load_minecraft_config
 
 
 TARGET_USERNAME = "NobleGreeb"
@@ -17,12 +23,13 @@ def find_player_entity(bot, username, timeout=60.0):
 
 
 def main():
+    config = load_minecraft_config()
     bot = Bot(
-        host="localhost",
-        auth="offline",
-        port=25565,
-        username="BotName",
-        version="1.21.11",
+        host=config.host,
+        auth=config.auth,
+        port=config.port,
+        username=config.username,
+        version=config.version,
     )
 
     try:

@@ -1,1 +1,2 @@
 lodestone==0.1.11
+websockets==11.0.3
